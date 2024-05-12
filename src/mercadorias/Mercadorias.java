@@ -4,9 +4,16 @@ public class Mercadorias {
 
     private int estoque;
     private String mercadorias;
-    private String qts;
+    private String quantidade;
     private String localizaçao;
 
+    public Mercadorias(String mercadorias, String quantidade, String localizaçao) {
+
+        this.mercadorias = mercadorias;
+        this.quantidade = quantidade;
+        this.localizaçao = localizaçao;
+
+    }
     public int getEstoque() {
         return estoque;
     }
@@ -19,16 +26,16 @@ public class Mercadorias {
         return mercadorias;
     }
 
-    public void setMercadorias(String mercadorias) {
-        this.mercadorias = mercadorias;
+    public void setMercadorias(String mercadoria) {
+        this.mercadorias = mercadoria;
     }
 
-    public String getQts() {
-        return qts;
+    public String getQuantidade() {
+        return quantidade;
     }
 
-    public void setQts(String qts) {
-        this.qts = qts;
+    public void setQuantidade(String quantidade) {
+        this.quantidade = quantidade;
     }
 
     public String getLocalizaçao() {
@@ -38,5 +45,6 @@ public class Mercadorias {
     public void setLocalizaçao(String localizaçao) {
         this.localizaçao = localizaçao;
     }
+    
 
 }

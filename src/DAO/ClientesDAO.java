@@ -5,7 +5,6 @@ import java.sql.SQLException;
 
 import clientes.Clientes;
 import conexao.Conexao;
-import mercadorias.Mercadorias;
 
 public class ClientesDAO {
 
@@ -26,35 +25,10 @@ public class ClientesDAO {
             ps.execute();
             ps.close();
 
-
         } catch (SQLException e) {
-            
+
             e.printStackTrace();
         }
     }
 
-
-    public void cadastrarMercadorias(Mercadorias mercadorias) {
-
-        String sql = "INSERT INTO ESTOQUE (MERCADORIAS, QTS, LOZALIZAÇAO) VALUES (?, ?, ?)";
-
-        PreparedStatement ps = null;
-
-        try {
-            ps = Conexao.getConexao().prepareStatement(sql);
-            ps.setString(1, mercadorias.getMercadorias());
-            ps.setString(2, mercadorias.getQts());
-            ps.setString(3, mercadorias.getLocalizaçao());
-            
-
-            ps.execute();
-            ps.close();
-
-
-        } catch (SQLException e) {
-            
-            e.printStackTrace();
-        }
-    }
-    
 }
